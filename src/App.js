@@ -5,6 +5,7 @@ import { quiz } from 'reducers/quiz'
 import { NextButton } from 'components/NextButton'
 import { RestartButton } from 'components/RestartButton'
 import { CurrentQuestion } from 'components/CurrentQuestion'
+import 'app.css'
 
 const reducer = combineReducers({
   quiz: quiz.reducer
@@ -17,12 +18,25 @@ export const App = () => {
 
   return (
     <Provider store={store}>
-      <h1>QUIZ</h1>
-      {!quizStart && <div><p>Welcome to our quiz.</p>
-        <button type="button" onClick={() => setQuizStart(true)}>Start</button></div>}
-      <NextButton />
-      <RestartButton />
-      {quizStart && <CurrentQuestion />}
+      <div className="background">
+
+        {
+          !quizStart
+          &&
+          <div className="introtext">
+            <h1 className="introHeading">Time to quiz!</h1>
+            <p className="quizCategory"> Do you know the Capital cities in Europe!?</p>
+            <button type="button" onClick={() => setQuizStart(true)}>Start</button>
+          </div>
+        }
+        {!store.quizOver && <RestartButton />}
+
+        <NextButton />
+
+
+
+        {quizStart && <CurrentQuestion />}
+      </div>
     </Provider>
   )
 }
