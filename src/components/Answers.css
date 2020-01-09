@@ -1,0 +1,31 @@
+.answer-wrap {
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-template-rows: repeat(2,2fr);
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
+    height: 200px;
+
+}
+
+.answer-buttons {
+    margin: 50px;
+    height: 100%;
+    width: 80%;
+    transform: scale(1);
+    transition: transform 400ms;
+    background-color: ;
+    font-size:20px;
+  }
+  
+  .answer-buttons:hover {
+    transform: scale(1.05);
+  }
+
+.rightAnswer {
+    background-color: green;
+}
+
+.wrongAnswer {
+    background-color: red;
+}
