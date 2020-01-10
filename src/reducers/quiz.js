@@ -14,7 +14,8 @@ const initialState = {
   questions,
   answers: [],
   currentQuestionIndex: 0,
-  quizOver: false
+  quizOver: false,
+  progressPercentage: 0
 }
 
 export const quiz = createSlice({
@@ -82,7 +83,10 @@ export const quiz = createSlice({
      */
     restart: () => {
       return initialState
-    }
+    },
+    setProgress: (state) => {
+      state.progressPercentage = (state.answers.length / state.questions.length) * 100
+    },
 
   }
 })
