@@ -17,9 +17,9 @@ export const Answers = ({ question }) => {
   })
 
   return (
-    <div className="answer-wrap">
+    <div className="answerWrap">
       {question && question.options.map((item, index) => {
-        const btnClasses = ['answer-buttons']
+        const btnClasses = ['answerButtons']
 
         // Check if saved answer is set for this question
         if (checkAnswer !== null) {
