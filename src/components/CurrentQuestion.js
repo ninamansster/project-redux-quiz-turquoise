@@ -7,6 +7,7 @@ import { NextButton } from 'components/NextButton'
 export const CurrentQuestion = () => {
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex])
   const quizEnd = useSelector((state) => state.quiz.quizOver)
+  const quizStarted = useSelector((state) => state.quiz.quizStarted)
 
   if (!question) {
     return <h1>Oh no! I could not find the current question!</h1>
@@ -14,7 +15,7 @@ export const CurrentQuestion = () => {
 
   return (
     <>
-      {!quizEnd && (
+      {!quizEnd && quizStarted && (
         <div>
           <h1>Question: {question.questionText}</h1>
           <Answers question={question} />
