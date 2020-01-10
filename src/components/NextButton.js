@@ -8,9 +8,13 @@ export const NextButton = () => {
 
   return (
     <>
-      <button type="button" onClick={() => dispatch(quiz.actions.goToNextQuestion())}>
+      <button type="button" onClick={() => {
+        dispatch(quiz.actions.setProgress())
+        dispatch(quiz.actions.goToNextQuestion())
+      }}>
         Next Question
       </button>
+
     </>
   )
 }
