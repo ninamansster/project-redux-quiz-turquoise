@@ -13,14 +13,23 @@ export const NextButton = () => {
 
   return (
     <>
-      {answers.length > currentQuestion &&
+      {answers.length <= 4 && answers.length > currentQuestion &&
         <button type="button" onClick={() => {
-        dispatch(quiz.actions.setProgress())
-        dispatch(quiz.actions.goToNextQuestion())
-      }}>
-        Next Question
+          dispatch(quiz.actions.setProgress())
+          dispatch(quiz.actions.goToNextQuestion())
+        }}>
+          Next Question
       </button>
       }
+      {answers.length === 5 &&
+        <button type="button" onClick={() => {
+          dispatch(quiz.actions.setProgress())
+          dispatch(quiz.actions.goToNextQuestion())
+        }}>
+          Show result
+      </button>
+      }
+
     </>
   )
 }

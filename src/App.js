@@ -25,7 +25,7 @@ export const App = () => {
             <button type="button" onClick={() => setQuizStart(true)}>Start</button>
           </div>
         }
-        {quizStart && <CurrentQuestion />}
+        {quizStart && !store.quizOver && <CurrentQuestion />}
         <RestartButton />
       </div>
     </Provider>
