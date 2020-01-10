@@ -8,24 +8,31 @@ export const NextButton = () => {
   const answers = useSelector((state) => state.quiz.answers)
   const currentQuestion = useSelector((state) => state.quiz.currentQuestionIndex) 
   const currentAnswer = answers.find(q => q.questionId === currentQuestion + 1)
-  // console.log(answers)
-  // console.log(currentQuestion)
-  // currentAnswer.isCorrect 
-
+  
   return (
     <>
-      {answers.length > currentQuestion &&
+      {answers.length <= 4 && answers.length > currentQuestion &&
         <button type="button" onClick={() => {
         dispatch(quiz.actions.setProgress())
         dispatch(quiz.actions.goToNextQuestion())
         if (currentAnswer.isCorrect) {
           dispatch(quiz.actions.setScore())
-        }
-        
+      }      
       }}>
-        Next Question
+        Next
       </button>
       }
+      {answers.length === 5 &&
+        <button type="button" onClick={() => {
+          dispatch(quiz.actions.setProgress())
+          dispatch(quiz.actions.goToNextQuestion())
+        if (currentAnswer.isCorrect) {
+          dispatch(quiz.actions.setScore())
+        }}>
+          Show result
+      </button>
+      }
+
     </>
   )
 }

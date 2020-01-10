@@ -16,7 +16,7 @@ export const RestartButton = () => {
           
           <button type="button" onClick={() => dispatch(quiz.actions.restart())}>
             Do it again!
-      </button>
+          </button>
         </div>)
       }
     </>

@@ -1,0 +1,36 @@
+.currentQuestion {
+  /* position: relative; */
+  /* background-color: blue; */
+  height: 700px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.currentQuestionHeader {
+  /* background-color: yellow; */
+}
+
+.currentQuestionAnswer {
+  /* background-color: grey; */
+  height: 350px; 
+  display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+
+}
+
+.currentQuestionNextButton {
+  /* position: absolute; */
+  /* background-color: green; */
+  align-self: flex-end;
+}
+
+.currentQuestionProgressBarWrapper {
+  /* background-color: lightcoral; */
+  justify-self: center;
+  align-self: center;
+}
+
+
