@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { ProgressBarContainer } from './ProgressBar'
 import { Answers } from 'components/Answers'
 import { NextButton } from 'components/NextButton'
 
@@ -13,9 +14,9 @@ export const CurrentQuestion = () => {
   return (
     <div>
       <h1>Question: {question.questionText}</h1>
-
       <Answers question={question} />
       <NextButton />
+      <ProgressBarContainer />
     </div>
   )
 }
