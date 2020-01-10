@@ -1,11 +1,11 @@
 /* PROGRESS BAR */
 .progress-bar {
-  position: relative;
+  /* position: relative; */
   height: 20px;
   width: 350px;
 	border-radius: 50px;
 	border: 2px solid #000;
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 .progress-container {
