@@ -5,6 +5,8 @@ import 'components/Answers.css'
 
 export const Answers = ({ question }) => {
   const dispatch = useDispatch()
+  const answerLength = useSelector((store) => store.quiz.answers)
+  const currentQuestion = useSelector((store) => store.quiz.currentQuestionIndex)
   const checkAnswer = useSelector((store) => {
     // Search in stored answers for an answer on current question
     // [].find returns found item in answers list, returns undefined if not
@@ -40,7 +42,8 @@ export const Answers = ({ question }) => {
             type="button"
             onClick={() => {
               dispatch(quiz.actions.submitAnswer({ questionId: question.id, answerIndex: index }))
-            }}>
+            }}
+            disabled={answerLength.length > currentQuestion}>
             {item}
           </button>
         )
