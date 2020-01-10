@@ -17,3 +17,6 @@ export const CurrentQuestion = () => {
     </div>
   )
 }
+
+
+//nextbutton is shown when questions is shown. TODO: don't show nextbutton when quizOver is true.

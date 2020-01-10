@@ -25,9 +25,11 @@ export const App = () => {
             <button type="button" onClick={() => setQuizStart(true)}>Start</button>
           </div>
         }
-        <RestartButton />
         {quizStart && <CurrentQuestion />}
+        <RestartButton />
       </div>
     </Provider>
   )
 }
+//Turnery !quizStart shows the starting text. Turnery quizStart shows the questions.
+

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { quiz } from 'reducers/quiz'
-import './Button.css'
+import './button.css'
 
 export const NextButton = () => {
   const dispatch = useDispatch()

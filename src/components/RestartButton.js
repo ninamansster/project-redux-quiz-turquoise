@@ -9,10 +9,14 @@ export const RestartButton = () => {
   return (
     <>
       {quizEnd && (
-        <button type="button" onClick={() => dispatch(quiz.actions.restart())}>
-          Do it again!
-      </button>)
+        <div>
+          <h1>YOU RESULT:</h1>
+          <button type="button" onClick={() => dispatch(quiz.actions.restart())}>
+            Do it again!
+      </button></div>)
       }
     </>
   )
 }
+
+// the restartbutton is shown when quizOver is true
