@@ -28,10 +28,11 @@ export const NextButton = () => {
           dispatch(quiz.actions.goToNextQuestion())
         if (currentAnswer.isCorrect) {
           dispatch(quiz.actions.setScore())
-        }}>
+        }}}>
           Show result
       </button>
-      }
+        }
+      
 
     </>
   )
