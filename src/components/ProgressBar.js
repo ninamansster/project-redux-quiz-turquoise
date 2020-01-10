@@ -20,7 +20,7 @@ export const ProgressBarContainer = () => {
   const [percentRange, setProgress] = useState(0)
   const answers = useSelector((store) => store.quiz.answers.length)
   const questions = useSelector((store) => store.quiz.questions.length)
-  const currentQuestion = useSelector((store) => store.quiz.currentQuesionIndex + 1)
+  const currentQuestion = useSelector((store) => store.quiz.currentQuestionIndex + 1)
 
   return (
     <div className="progress-container">

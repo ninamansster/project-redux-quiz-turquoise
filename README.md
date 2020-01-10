@@ -88,7 +88,7 @@ dispatch(quiz.actions.restart())
 Use the redux dev tools in chrome to inspect the store and see what it contains. You can write your own selectors to fetch whatever you need from the store. We've given you one example in src/components/CurrentQuestion.js to get you started with fetching the current question from the store:
 
 ```js
-const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuesionIndex])
+const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex])
 ```
 
 You can build up these selector functions to use other information you have to fetch specific things. For example, you could fetch the answer to a question:
