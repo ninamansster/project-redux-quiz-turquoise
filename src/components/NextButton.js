@@ -12,26 +12,27 @@ export const NextButton = () => {
   return (
     <>
       {answers.length <= 4 && answers.length > currentQuestion &&
-        <button type="button" onClick={() => {
-          dispatch(quiz.actions.goToNextQuestion())
-          if (currentAnswer.isCorrect) {
-            dispatch(quiz.actions.setScore())
-          }
-        }}>
+        <button
+          type="button"
+          onClick={() => {
+            dispatch(quiz.actions.goToNextQuestion())
+            if (currentAnswer.isCorrect) {
+              dispatch(quiz.actions.setScore())
+            }
+          }}>
           Next
-        </button>
-      }
+        </button>}
       {answers.length === 5 &&
-        <button type="button" onClick={() => {
-          dispatch(quiz.actions.goToNextQuestion())
-          if (currentAnswer.isCorrect) {
-            dispatch(quiz.actions.setScore())
-          }
-        }}>
+        <button
+          type="button"
+          onClick={() => {
+            dispatch(quiz.actions.goToNextQuestion())
+            if (currentAnswer.isCorrect) {
+              dispatch(quiz.actions.setScore())
+            }
+          }}>
           Show result
-        </button>
-      }
-
+        </button>}
 
     </>
   )
