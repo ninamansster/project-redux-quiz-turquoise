@@ -26,6 +26,6 @@ export const ProgressBarContainer = () => {
     <div className="progress-container">
       <ProgressBar percentRange={percentRange} />
       Question: {currentQuestion} / {questions}
-    </div >
+    </div>
   )
 }

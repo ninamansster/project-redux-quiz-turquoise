@@ -90,7 +90,7 @@ export const quiz = createSlice({
       state.progressPercentage = (state.answers.length / state.questions.length) * 100
     },
     setScore: (state) => {
-        state.score+=1 
+      state.score += 1
     },
     start: (state) => {
       state.quizStarted = true
